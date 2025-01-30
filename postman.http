@@ -1,1 +1,38 @@
 get http://localhost:3000/post/1
+
+### create post
+
+post http://localhost:3000/post
+headers:
+  Content-Type: application/json
+
+{
+"title": "Bob post",
+"content": "Some content",
+"authorEmail": "bob@example.com"
+}
+
+### create user
+
+post http://localhost:3000/user
+headers:
+  Content-Type: application/json
+
+{
+    "name": "Bob",
+    "email": "bob@example.com"
+}
+
+### feed - active
+
+get http://localhost:3000/feed
+
+### publish post
+
+put http://localhost:3000/publish/1
+headers:
+  Content-Type: application/json
+
+### filtered-posts
+
+get http://localhost:3000/filtered-posts/Some
